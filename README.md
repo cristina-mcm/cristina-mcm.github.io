@@ -1,4 +1,4 @@
-# Cristina McMillin — Portfolio Website
+### Cristina McMillin — Portfolio Website
 
 This repository contains my personal portfolio website, featuring projects in
 data analysis, statistical modeling, data visualization, and optimization.
