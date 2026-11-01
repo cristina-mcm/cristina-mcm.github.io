@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Optimizing the U.S. Energy Mix | Cristina McMillin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar-responsive">
+    							<img src="../images/avatar.jpg" alt="Portrait of Cristina McMillin" />
+							</span>
+							<h1 id="title">Cristina McMillin</h1>
+							<p>Applied Mathematics &bull; Economics<br />
+								Data Analysis</p>
+						</div>
+
+					<!-- Navigation -->
+						<nav id="nav" aria-label="Primary navigation">
+							<ul>
+								<li>
+									<a href="../index.html#top">
+										<span class="icon solid fa-home">Home</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#portfolio">
+										<span class="icon solid fa-star">Featured Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../projects.html" class="active">
+										<span class="icon solid fa-th">All Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#about">
+										<span class="icon solid fa-user">About Me</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#contact">
+										<span class="icon solid fa-envelope">Contact</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/cristina-mcm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:cristinamcmillin.cm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+			    <section class="two">
+					<div class="container project-detail">
+
+						<header>
+							<h2>
+								Optimizing the U.S. Energy Mix to Reduce Greenhouse Gas Emissions by 2030
+							</h2>
+
+							<p class="project-subtitle">
+								Python &bull; Ridge Regression &bull; Linear Programming
+							</p>
+
+							<p>
+								An applied mathematics capstone examining the relationship between
+								U.S. energy-source composition and greenhouse gas emissions, followed
+								by optimization of a lower-emission energy mix for 2030.
+							</p>
+						</header>
+
+						<a class="image featured">
+							<img
+								src="../images/energy-mix-banner.jpg"
+								alt="Visualization from the U.S. Energy Mix Optimization project"
+							/>
+						</a>
+						
+						<div class="project-content">
+						
+							<h3>Project Overview</h3>
+
+							<p>
+								This project investigates how changes in the composition of the
+								U.S. energy mix are associated with greenhouse gas emission intensity. It
+								then uses mathematical optimization to identify potential energy mixes that
+								could reduce emissions by 2030 while remaining within practical generation
+								constraints.
+							</p>
+
+							<p>
+								The project combines two models. Ridge regression evaluates historical
+								relationships between energy-source shares and emission intensity, while
+								linear programming determines an energy mix that minimizes projected
+								lifecycle emissions.
+							</p>
+
+							<h3>Data Sources</h3>
+
+							<p>
+								The historical analysis combines U.S. energy-mix data from Our World in Data
+								with greenhouse gas emissions data from Climate Watch for 1965 through 2023.
+								The optimization model also uses projected 2030 energy demand from the
+								U.S. Energy Information Administration's Annual Energy Outlook 2025 and
+								published lifecycle-emission estimates for individual energy sources.
+							</p>
+
+							<h3>Data Preparation and Methods</h3>
+
+							<p>
+								The historical datasets were cleaned, standardized, and merged by year.
+								Energy consumption values were converted into percentage shares, and
+								greenhouse gas emission intensity was calculated in metric tons of
+								CO₂-equivalent per terawatt-hour.
+							</p>
+
+							<p>
+								A multiple linear regression model was initially considered, but strong
+								multicollinearity among energy-source shares produced unstable and
+								unrealistic coefficients. Ridge regression was therefore used to stabilize
+								the model while retaining seven energy-source predictors.
+							</p>
+
+							<p>
+								The second part of the project used linear programming to minimize projected
+								2030 lifecycle emissions. The model incorporated a projected energy demand
+								of 26,921 TWh, energy-source bounds, a minimum baseload requirement,
+								limits on fossil-fuel dependence, and restrictions on the combined share of
+								solar and wind. Additional scenarios examined carbon capture and expanded
+								energy-storage capacity.
+							</p>
+
+							<h3>Analysis and Key Findings</h3>
+
+							<p>
+								The Ridge model used an optimized regularization parameter of approximately
+								0.003678 and explained about 98.8% of the historical variation in emission
+								intensity. The analysis indicated that higher shares of lower-emission
+								sources were generally associated with reduced emission intensity, while
+								larger fossil-fuel shares were associated with increased intensity.
+							</p>
+
+							<p>
+								The linear-programming model tested whether the United States could reduce
+								emissions by at least 50% from the 2005 baseline while satisfying the
+								generation constraints. Scenarios without carbon capture could not reach the
+								target under the established limits, while carbon-capture scenarios produced
+								feasible lower-emission energy mixes.
+							</p>
+
+							<ul>
+								<li>
+									The Ridge model achieved an R² of approximately 0.988, demonstrating a
+									strong fit to the historical data.
+								</li>
+
+								<li>
+									The constrained optimization model could not meet the emissions target
+									without carbon capture.
+								</li>
+
+								<li>
+									Carbon-capture scenarios produced projected emissions between
+									approximately 2.53 and 2.68 billion metric tons of CO₂-equivalent.
+								</li>
+
+								<li>
+									In the final carbon-capture scenario, the optimized mix included 13%
+									solar, 12% wind, 15% nuclear, 32.95% natural gas, 20% oil, no coal,
+									7% other renewables, and a small hydropower share.
+								</li>
+
+								<li>
+									Expanded storage capacity allowed solar generation to increase to 20%
+									while reducing the model's reliance on natural gas.
+								</li>
+							</ul>
+
+							<h3>Skills Demonstrated</h3>
+
+							<ul>
+								<li>Python and Jupyter Notebook</li>
+								<li>Data cleaning, integration, and feature preparation</li>
+								<li>Exploratory data analysis and visualization</li>
+								<li>Regression diagnostics and multicollinearity assessment</li>
+								<li>Ridge regression with scikit-learn</li>
+								<li>Model evaluation and interpretation</li>
+								<li>Linear programming with PuLP</li>
+							</ul>
+						</div>
+
+						<footer>
+							<a
+								href="https://github.com/cristina-mcm/Optimizing-the-U.S.-Energy-Mix-to-Reduce-Greenhouse-Gas-Emissions-by-2030-Python"
+								class="button"
+							>View Project on GitHub</a>
+						</footer>
+
+					</div>
+				</section>	
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2026 Cristina McMillin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

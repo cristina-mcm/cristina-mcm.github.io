@@ -1,0 +1,601 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license
+	(html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>All Projects | Cristina McMillin</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no"
+		/>
+		<meta
+			name="description"
+			content="Data analysis projects by Cristina McMillin using Python, MySQL, Tableau, Power BI, Excel, and R."
+		/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			.projects-intro {
+				max-width: 52em;
+				margin: 0 auto 2em auto;
+			}
+
+			.project-filters {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.65em;
+				margin: 0 0 0.75em 0;
+			}
+
+			.project-filter {
+				appearance: none;
+				-webkit-appearance: none;
+				min-width: 0;
+				height: auto;
+				padding: 0.65em 1.2em;
+				border: solid 1px #8ebebc;
+				border-radius: 2em;
+				background: transparent;
+				background-image: none;
+				box-shadow: none;
+				color: #456867 !important;
+				font: inherit;
+				line-height: 1.2;
+				text-shadow: none;
+				cursor: pointer;
+			}
+
+			.project-filter:hover,
+			.project-filter:focus-visible {
+				background: rgba(142, 190, 188, 0.15);
+				color: #315150 !important;
+			}
+
+			.project-filter.active {
+				background: #216e48;
+				border-color: #216e48;
+				color: #ffffff !important;
+			}
+
+			.project-count {
+				margin: 0 0 2em 0;
+				font-size: 0.9em;
+				color: #777;
+			}
+
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1.5em;
+				align-items: stretch;
+			}
+
+			.project-card {
+				display: flex;
+				flex-direction: column;
+				margin: 0;
+				background: #ffffff;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+			}
+
+			.project-card[hidden] {
+				display: none;
+			}
+
+			.project-card .image {
+				margin: 0;
+				background: #dce8e3;
+				overflow: hidden;
+			}
+
+			.project-card .image img {
+				display: block;
+				width: 100%;
+				aspect-ratio: 16 / 10;
+				object-fit: cover;
+				transition: transform 0.25s ease;
+			}
+
+			.project-card .image:hover img {
+				transform: scale(1.025);
+			}
+
+			.project-card header {
+				display: flex;
+				flex: 1;
+				flex-direction: column;
+				padding: 1.1em 1em 1em 1em;
+				background: #ffffff;
+			}
+
+			.project-card h3 {
+				margin: 0;
+				color: #3f5f5d;
+				font-size: 1em;
+				font-weight: 500;
+				line-height: 1.35;
+			}
+
+			.project-tags {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.4em;
+				margin: 0.85em 0 0 0;
+			}
+
+			.project-tag {
+				display: inline-block;
+				padding: 0.22em 0.65em;
+				border-radius: 1em;
+				background: #e9f2ef;
+				color: #456867;
+				font-size: 0.72em;
+				font-weight: 500;
+				line-height: 1.4;
+			}
+
+			.project-links {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.35em 0.9em;
+				margin-top: auto;
+				padding-top: 0.9em;
+				font-size: 0.78em;
+			}
+
+			.project-links a {
+				color: #4f817f;
+				font-weight: 500;
+				text-decoration: none;
+			}
+
+			.project-links a:hover,
+			.project-links a:focus-visible {
+				text-decoration: underline;
+			}
+
+			@media screen and (max-width: 1320px) {
+				.projects-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+
+			@media screen and (max-width: 736px) {
+				.projects-grid {
+					grid-template-columns: 1fr;
+					gap: 1.25em;
+				}
+
+				.project-filter {
+					padding: 0.6em 0.95em;
+				}
+			}
+		</style>
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+		<div id="header">
+			<div class="top">
+
+				<!-- Logo -->
+				<div id="logo">
+					<span class="image avatar-responsive">
+						<img src="images/avatar.jpg" alt="Cristina McMillin" />
+					</span>
+					<h1 id="title">Cristina McMillin</h1>
+					<p>Applied Mathematics &bull; Economics<br />
+								Data Analysis</p>
+				</div>
+
+				<!-- Navigation -->
+				<nav id="nav" aria-label="Primary navigation">
+					<ul>
+						<li>
+							<a href="index.html#top">
+								<span class="icon solid fa-home">Home</span>
+							</a>
+						</li>
+						<li>
+							<a href="index.html#portfolio">
+								<span class="icon solid fa-star">Featured Projects</span>
+							</a>
+						</li>
+						<li>
+							<a href="#projects" class="active">
+								<span class="icon solid fa-th">All Projects</span>
+							</a>
+						</li>
+						<li>
+							<a href="index.html#about">
+								<span class="icon solid fa-user">About Me</span>
+							</a>
+						</li>
+						<li>
+							<a href="index.html#contact">
+								<span class="icon solid fa-envelope">Contact</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="bottom">
+				<!-- Social Icons -->
+						<ul class="icons">
+							
+							<li><a href="https://github.com/cristina-mcm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:cristinamcmillin.cm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<section id="projects" class="two">
+				<div class="container">
+					<header>
+						<h2>All Projects</h2>
+					</header>
+
+					<p class="projects-intro">
+						A collection of data analysis, statistical modeling, dashboard,
+						and Python projects. Select a technology to filter the collection.
+						Click a project image to open its GitHub repository.
+					</p>
+
+					<div class="project-filters" role="group" aria-label="Filter projects by technology">
+						<button class="project-filter active" type="button" data-filter="all" aria-pressed="true">All</button>
+						<button class="project-filter" type="button" data-filter="python" aria-pressed="false">Python</button>
+						<button class="project-filter" type="button" data-filter="sql" aria-pressed="false">MySQL</button>
+						<button class="project-filter" type="button" data-filter="tableau" aria-pressed="false">Tableau</button>
+						<button class="project-filter" type="button" data-filter="power-bi" aria-pressed="false">Power BI</button>
+						<button class="project-filter" type="button" data-filter="excel" aria-pressed="false">Excel</button>
+						<button class="project-filter" type="button" data-filter="r" aria-pressed="false">R</button>
+					</div>
+
+					<p id="project-count" class="project-count" aria-live="polite">Showing 20 projects</p>
+
+					<div class="projects-grid">
+
+						<!-- 1. Energy Optimization -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Optimizing-the-U.S.-Energy-Mix-to-Reduce-Greenhouse-Gas-Emissions-by-2030-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/energy-mix-optimization.jpg" alt="U.S. Energy Mix Optimization" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>U.S. Energy Mix Optimization</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links">
+									<a href="projects/energy-mix.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/Optimizing-the-U.S.-Energy-Mix-to-Reduce-Greenhouse-Gas-Emissions-by-2030-Python" target="_blank" rel="noopener noreferrer">GitHub</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 2. Banking Complaints -->
+						<article class="item project-card" data-tech="python sql tableau">
+							<a href="https://github.com/cristina-mcm/CFPB-Consumer-Complaint-Analysis-Python-MySQL-Tableau" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/banking-complaints.jpg" alt="Consumer Banking Complaints Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Consumer Banking Complaints Analysis</h3>
+								<div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">MySQL</span><span class="project-tag">Tableau</span></div>
+								<div class="project-links">
+									<a href="projects/banking-complaints.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/CFPB-Consumer-Complaint-Analysis-Python-MySQL-Tableau" target="_blank" rel="noopener noreferrer">GitHub</a>
+									<a href="https://public.tableau.com/app/profile/cristina.mcm/viz/07_Tableau_Dashboard/ComplaintOverview" target="_blank" rel="noopener noreferrer">Dashboard</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 3. Steam Games Python -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Steam-Games-Data-Analysis-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/steam-games-python.jpg" alt="Steam Games Data Preparation and Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Steam Games Data Preparation and Analysis</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links">
+									<a href="projects/steam-games.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/Steam-Games-Data-Analysis-Python" target="_blank" rel="noopener noreferrer">GitHub</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 4. Steam Games Power BI -->
+						<article class="item project-card" data-tech="power-bi">
+							<a href="https://github.com/cristina-mcm/Steam-Games-Analysis-Power-BI" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/steam-games-power-bi.jpg" alt="Steam Games Market Dashboard" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Steam Games Market Dashboard</h3>
+								<div class="project-tags"><span class="project-tag">Power BI</span></div>
+								<div class="project-links">
+									<a href="projects/steam-games.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/Steam-Games-Analysis-Power-BI" target="_blank" rel="noopener noreferrer">GitHub</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 5. Dallas Airbnb -->
+						<article class="item project-card" data-tech="tableau">
+							<a href="https://github.com/cristina-mcm/Dallas-Airbnb-Dashboard-Tableau" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/dallas-airbnb-tableau.jpg" alt="Dallas Airbnb Dashboard" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Dallas Airbnb Dashboard</h3>
+								<div class="project-tags"><span class="project-tag">Tableau</span></div>
+								<div class="project-links">
+									<a href="projects/dallas-airbnb.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/Dallas-Airbnb-Dashboard-Tableau" target="_blank" rel="noopener noreferrer">GitHub</a>
+									<a href="https://public.tableau.com/app/profile/cristina.mcm/viz/AirbnbDallas2026Data/Dashboard1" target="_blank" rel="noopener noreferrer">Dashboard</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 6. Medicare -->
+						<article class="item project-card" data-tech="power-bi">
+							<a href="https://github.com/cristina-mcm/Medicare-Part-D-Drug-Spending-Analysis-Power-BI" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/medicare-spending.jpg" alt="Medicare Prescription Drug Spending" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Medicare Prescription Drug Spending</h3>
+								<div class="project-tags"><span class="project-tag">Power BI</span></div>
+								<div class="project-links">
+									<a href="projects/medicare-drug-spending.html">View Case Study</a>
+									<a href="https://github.com/cristina-mcm/Medicare-Part-D-Drug-Spending-Analysis-Power-BI" target="_blank" rel="noopener noreferrer">GitHub</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 7. Heart Disease -->
+						<article class="item project-card" data-tech="r">
+							<a href="https://github.com/cristina-mcm/Heart-Disease-Modeling-R" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/heart-disease-modeling.jpg" alt="Heart Disease Modeling" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Heart Disease Modeling</h3>
+								<div class="project-tags"><span class="project-tag">R</span></div>
+								<div class="project-links">
+									<a href="https://github.com/cristina-mcm/Heart-Disease-Modeling-R" target="_blank" rel="noopener noreferrer">GitHub</a>
+									    <a href="notebooks/heart_disease_notebook.html" target="_blank">View Analysis</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 8. Housing Prices -->
+						<article class="item project-card" data-tech="r">
+							<a href="https://github.com/cristina-mcm/Housing-Price-Modeling-R" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/housing-price-modeling.jpg" alt="Housing Price Modeling" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Housing Price Modeling</h3>
+								<div class="project-tags"><span class="project-tag">R</span></div>
+								<div class="project-links">
+									<a href="https://github.com/cristina-mcm/Housing-Price-Modeling-R" target="_blank" rel="noopener noreferrer">GitHub</a>
+									<a href="notebooks/housing_price_notebook.html" target="_blank">View Analysis</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 9. World Layoffs -->
+						<article class="item project-card" data-tech="sql power-bi">
+							<a href="https://github.com/cristina-mcm/World-Layoffs-Analysis-MySQL-Powe-BI" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/world-layoffs-analysis.jpg" alt="World Layoffs Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>World Layoffs Analysis</h3>
+								<div class="project-tags"><span class="project-tag">MySQL</span><span class="project-tag">Power BI</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/World-Layoffs-Analysis-MySQL-Powe-BI" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 10. COVID-19 -->
+						<article class="item project-card" data-tech="sql tableau">
+							<a href="https://github.com/cristina-mcm/Covid-Data-Project-MySQL-Tableau" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/covid-data-analysis.jpg" alt="COVID-19 Data Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>COVID-19 Data Analysis</h3>
+								<div class="project-tags"><span class="project-tag">MySQL</span><span class="project-tag">Tableau</span></div>
+								<div class="project-links">
+									<a href="https://github.com/cristina-mcm/Covid-Data-Project-MySQL-Tableau" target="_blank" rel="noopener noreferrer">GitHub</a>
+									<a href="https://public.tableau.com/app/profile/cristina.mcm/viz/CovidDashBoard_17869347611880/Dashboard1" target="_blank" rel="noopener noreferrer">Dashboard</a>
+								</div>
+							</header>
+						</article>
+
+						<!-- 11. Data Professional Survey -->
+						<article class="item project-card" data-tech="power-bi">
+							<a href="https://github.com/cristina-mcm/Data-Professional-Survey-Power-BI" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/data-professional-survey.jpg" alt="Data Professional Survey Dashboard" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Data Professional Survey Dashboard</h3>
+								<div class="project-tags"><span class="project-tag">Power BI</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Power-BI-First-Project" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 12. Nashville Housing -->
+						<article class="item project-card" data-tech="sql">
+							<a href="https://github.com/cristina-mcm/Nashville-Housing-Data-Cleaning-MySQL" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/nashville-housing-cleaning.jpg" alt="Nashville Housing Data Cleaning" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Nashville Housing Data Cleaning</h3>
+								<div class="project-tags"><span class="project-tag">MySQL</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Nashville-Housing-Data-Cleaning-MySQL" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 13. Movie Correlation -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Movies-Correlation-Analysis-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/movie-correlation-analysis.jpg" alt="Movie Correlation Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Movie Correlation Analysis</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Movies-Correlation-Analysis-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 14. Bike Sales -->
+						<article class="item project-card" data-tech="excel">
+							<a href="https://github.com/cristina-mcm/Bike-Sales-Excel" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/bike-sales-dashboard.jpg" alt="Bike Sales Dashboard" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Bike Sales Dashboard</h3>
+								<div class="project-tags"><span class="project-tag">Excel</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Bike-Sales-Excel" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 15. Cryptocurrency API -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Cryptocurrency-API-Extraction-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/cryptocurrency-api-analysis.jpg" alt="Cryptocurrency API Analysis" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Cryptocurrency API Analysis</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Cryptocurrency-API-Extraction-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 16. Population Scraper -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Population-by-Country-Web-Scraper-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/country-population-scraper.jpg" alt="Country Population Web Scraper" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Country Population Web Scraper</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Population-by-Country-Web-Scraper-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 17. Price Tracker -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Product-Price-Tracker-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/product-price-tracker.jpg" alt="Product Price Tracker" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Product Price Tracker</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Product-Price-Tracker-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 18. Workout Recommendation -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Workout-Recommendation-Program-PYTHON" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/workout-recommendation.jpg" alt="Workout Recommendation Program" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Workout Recommendation Program</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Workout-Recommendation-Program-PYTHON" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 19. BMI Calculator -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Interactive-BMI-Calculator-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/interactive-bmi-calculator.jpg" alt="Interactive BMI Calculator" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Interactive BMI Calculator</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Interactive-BMI-Calculator-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+						<!-- 20. File Sorter -->
+						<article class="item project-card" data-tech="python">
+							<a href="https://github.com/cristina-mcm/Automatic-File-Sorter-Python" class="image fit" target="_blank" rel="noopener noreferrer">
+								<img src="images/automatic-file-sorter.jpg" alt="Automatic File Sorter" onerror="this.onerror=null; this.src='images/banner.jpg';" />
+							</a>
+							<header>
+								<h3>Automatic File Sorter</h3>
+								<div class="project-tags"><span class="project-tag">Python</span></div>
+								<div class="project-links"><a href="https://github.com/cristina-mcm/Automatic-File-Sorter-Python" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+							</header>
+						</article>
+
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<ul class="copyright">
+				<li>&copy; 2026 Cristina McMillin. All rights reserved.</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			(function () {
+				const filters = document.querySelectorAll('.project-filter');
+				const cards = document.querySelectorAll('.project-card');
+				const count = document.getElementById('project-count');
+
+				filters.forEach(function (button) {
+					button.addEventListener('click', function () {
+						const selectedTechnology = button.dataset.filter;
+						let visibleProjects = 0;
+
+						filters.forEach(function (filterButton) {
+							const isActive = filterButton === button;
+							filterButton.classList.toggle('active', isActive);
+							filterButton.setAttribute('aria-pressed', isActive);
+						});
+
+						cards.forEach(function (card) {
+							const technologies = card.dataset.tech.split(' ');
+							const shouldShow =
+								selectedTechnology === 'all' ||
+								technologies.includes(selectedTechnology);
+
+							card.hidden = !shouldShow;
+
+							if (shouldShow) {
+								visibleProjects += 1;
+							}
+						});
+
+						count.textContent =
+							'Showing ' +
+							visibleProjects +
+							(visibleProjects === 1 ? ' project' : ' projects');
+					});
+				});
+			})();
+		</script>
+
+	</body>
+</html>

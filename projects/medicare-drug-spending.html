@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Medicare Prescription Drug Spending | Cristina McMillin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar-responsive">
+    							<img src="../images/avatar.jpg" alt="Portrait of Cristina McMillin" />
+							</span>
+							<h1 id="title">Cristina McMillin</h1>
+							<p>Applied Mathematics &bull; Economics<br />
+								Data Analysis</p>
+						</div>
+
+					<!-- Navigation -->
+						<nav id="nav" aria-label="Primary navigation">
+							<ul>
+								<li>
+									<a href="../index.html#top">
+										<span class="icon solid fa-home">Home</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#portfolio">
+										<span class="icon solid fa-star">Featured Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../projects.html" class="active">
+										<span class="icon solid fa-th">All Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#about">
+										<span class="icon solid fa-user">About Me</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#contact">
+										<span class="icon solid fa-envelope">Contact</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/cristina-mcm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:cristinamcmillin.cm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+			    <section class="two">
+					<div class="container project-detail">
+
+						<header>
+							<h2>Medicare Part D Drug Spending Analysis</h2>
+
+							<p class="project-subtitle">
+								Power BI
+							</p>
+
+							<p>
+								An interactive Power BI analysis of Medicare Part D
+								prescription drug spending, claims, manufacturers, and
+								changes in unit cost from 2020 through 2024.
+							</p>
+						</header>
+
+						<a class="image featured">
+							<img
+								src="../images/medicare-spending-banner.jpg"
+								alt="Medicare Part D Drug Spending Power BI dashboard"
+							/>
+						</a>
+
+						<div class="project-content">
+							<h3>Project Objective</h3>
+
+							<p>
+								This project examines prescription drug spending within the
+								Medicare Part D program. The analysis was designed to identify
+								major spending patterns, compare drugs and manufacturers, and
+								highlight products with substantial growth in unit cost over
+								the five-year period.
+							</p>
+
+							<h3>Data Source</h3>
+
+							<p>
+								The analysis uses publicly available Medicare Part D
+								prescription drug spending data from the Centers for Medicare
+								and Medicaid Services. The dataset includes annual information
+								about prescription drugs, manufacturers, claims, total
+								spending, and average spending per unit.
+							</p>
+
+							<h3>Data Preparation</h3>
+
+							<p>
+								The data were prepared for analysis by reviewing field types,
+								organizing annual spending measures, and creating calculations
+								for comparisons across years. Additional measures were used to
+								summarize total spending, claim volume, manufacturer activity,
+								and changes in unit cost.
+							</p>
+
+							<h3>Power BI Dashboard</h3>
+
+							<p>
+								The interactive dashboard allows users to examine spending by
+								drug and manufacturer, compare claims with total expenditures,
+								review annual trends, and identify medications experiencing
+								notable changes in average unit cost.
+							</p>
+
+							<p>
+								Filters and interactive visuals make it possible to move from
+								an overall view of Medicare Part D spending to more detailed
+								comparisons of individual drugs and manufacturers.
+							</p>
+
+							<div class="dashboard-card">
+								<img
+									src="../images/medicare-dashboard.png"
+									alt="Medicare Prescription Drug Spending Power BI dashboard"
+									class="dashboard-preview"
+									onclick="openLightbox(this.src, this.alt)"
+								/>
+							</div>
+
+							<h3>Skills Demonstrated</h3>
+
+							<ul>
+								<li>Data cleaning and transformation with Power Query</li>
+								<li>Power BI data modeling</li>
+								<li>DAX measures and calculated fields</li>
+								<li>Interactive dashboard development</li>
+							</ul>
+						</div>
+
+						<footer>
+							<a
+								href="https://github.com/cristina-mcm/Medicare-Part-D-Drug-Spending-Analysis-Power-BI"
+								class="button"
+							>
+								View Project Files
+							</a>
+						</footer>
+
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2026 Cristina McMillin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<div
+				id="dashboard-lightbox"
+				class="dashboard-lightbox"
+				onclick="closeLightbox()"
+			>
+				<span class="lightbox-close">&times;</span>
+
+				<img
+					id="lightbox-image"
+					src=""
+					alt=""
+					onclick="event.stopPropagation()"
+				/>
+			</div>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script>
+				function openLightbox(imageSource, imageDescription) {
+					const lightbox = document.getElementById('dashboard-lightbox');
+					const image = document.getElementById('lightbox-image');
+
+					image.src = imageSource;
+					image.alt = imageDescription;
+					lightbox.classList.add('open');
+				}
+
+				function closeLightbox() {
+					document
+						.getElementById('dashboard-lightbox')
+						.classList.remove('open');
+				}
+
+				document.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape') {
+						closeLightbox();
+					}
+				});
+			</script>
+
+	</body>
+</html>

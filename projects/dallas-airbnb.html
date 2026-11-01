@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dallas Airbnb Dashboard | Cristina McMillin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar-responsive">
+    							<img src="../images/avatar.jpg" alt="Portrait of Cristina McMillin" />
+							</span>
+							<h1 id="title">Cristina McMillin</h1>
+							<p>Applied Mathematics &bull; Economics<br />
+								Data Analysis</p>
+						</div>
+
+					<!-- Navigation -->
+						<nav id="nav" aria-label="Primary navigation">
+							<ul>
+								<li>
+									<a href="../index.html#top">
+										<span class="icon solid fa-home">Home</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#portfolio">
+										<span class="icon solid fa-star">Featured Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../projects.html" class="active">
+										<span class="icon solid fa-th">All Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#about">
+										<span class="icon solid fa-user">About Me</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#contact">
+										<span class="icon solid fa-envelope">Contact</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/cristina-mcm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:cristinamcmillin.cm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+			    <section class="two">
+					<div class="container project-detail">
+
+						<header>
+							<h2>Dallas Airbnb Dashboard</h2>
+
+							<p class="project-subtitle">
+							Tableau
+							</p>
+
+							<p>
+								An interactive Tableau dashboard analyzing Dallas Airbnb
+								listings, nightly prices, neighborhood distribution, and
+								calendar availability using a 2026 data snapshot.
+							</p>
+						</header>
+
+						<a class="image featured">
+							<img
+								src="../images/dallas-airbnb-banner.jpg"
+								alt="Dallas Airbnb Tableau dashboard"
+							/>
+						</a>
+
+						<div class="project-content">
+							<h3>Project Overview</h3>
+
+							<p>
+								This project explores the Dallas short-term rental market by
+								examining where Airbnb listings are located, how nightly prices
+								vary across neighborhoods and property characteristics, and
+								how listing availability differs throughout the market.
+							</p>
+
+							<h3>Data Source</h3>
+
+							<p>
+								The analysis uses 2026 listings and calendar data from Inside
+								Airbnb. Because the available files did not contain ZIP codes,
+								Dallas neighborhood district boundaries were incorporated
+								through a geographic data file to support a district-level
+								spatial analysis.
+							</p>
+
+							<h3>Data Preparation</h3>
+
+							<p>
+								Listing information was combined with calendar availability
+								data and geographic district boundaries. Calculated fields
+								were created to measure the percentage of days available and
+								to support comparisons of listing prices, bedrooms,
+								neighborhoods, and other property characteristics.
+							</p>
+
+							<h3>Tableau Dashboard</h3>
+
+							<div class="dashboard-card">
+								<img
+									src="../images/dallas-airbnb-dashboard.png"
+									alt="Dallas Airbnb Tableau dashboard"
+									class="dashboard-preview"
+									onclick="openLightbox(this.src, this.alt)"
+								/>
+
+								<p>
+									<a
+										href="https://public.tableau.com/app/profile/cristina.mcm/viz/AirbnbDallas2026Data/Dashboard1"
+									>
+										View Interactive Dashboard
+									</a>
+								</p>
+							</div>
+
+							<p>
+								The dashboard includes a district-level map showing the
+								geographic distribution of listings, comparisons of nightly
+								prices across property characteristics, and visualizations of
+								calendar availability.
+							</p>
+
+							<p>
+								Interactive filters allow users to examine particular
+								neighborhoods and listing characteristics. Both total and
+								median price measures were considered to distinguish overall
+								market activity from the typical price of an individual
+								listing.
+							</p>
+
+							<h3>Skills Demonstrated</h3>
+
+							<ul>
+								<li>Tableau dashboard development</li>
+								<li>Data cleaning and preparation</li>
+								<li>Calculated fields and data aggregation</li>
+								<li>Geospatial mapping with GeoJSON data</li>
+								<li>Interactive filters and dashboard navigation</li>
+							</ul>
+						</div>
+
+						<footer class="project-buttons">
+
+							<a
+								href="https://github.com/cristina-mcm/Dallas-Airbnb-Dashboard-Tableau"
+								class="button"
+							>
+								View Project Files
+							</a>
+
+							<a
+								href="https://public.tableau.com/app/profile/cristina.mcm/viz/AirbnbDallas2026Data/Dashboard1"
+								class="button"
+							>
+								View Tableau Dashboard
+							</a>
+
+						</footer>
+
+					</div>
+				</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2026 Cristina McMillin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<div
+				id="dashboard-lightbox"
+				class="dashboard-lightbox"
+				onclick="closeLightbox()"
+			>
+				<span class="lightbox-close">&times;</span>
+
+				<img
+					id="lightbox-image"
+					src=""
+					alt=""
+					onclick="event.stopPropagation()"
+				/>
+			</div>
+		
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script>
+				function openLightbox(imageSource, imageDescription) {
+					const lightbox = document.getElementById('dashboard-lightbox');
+					const image = document.getElementById('lightbox-image');
+
+					image.src = imageSource;
+					image.alt = imageDescription;
+					lightbox.classList.add('open');
+				}
+
+				function closeLightbox() {
+					document
+						.getElementById('dashboard-lightbox')
+						.classList.remove('open');
+				}
+
+				document.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape') {
+						closeLightbox();
+					}
+				});
+			</script>
+
+	</body>
+</html>

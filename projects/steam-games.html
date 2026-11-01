@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Steam Games Data Analysis | Cristina McMillin</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar-responsive">
+    							<img src="../images/avatar.jpg" alt="Portrait of Cristina McMillin" />
+							</span>
+							<h1 id="title">Cristina McMillin</h1>
+							<p>Applied Mathematics &bull; Economics<br />
+								Data Analysis</p>
+						</div>
+
+					<!-- Navigation -->
+						<nav id="nav" aria-label="Primary navigation">
+							<ul>
+								<li>
+									<a href="../index.html#top">
+										<span class="icon solid fa-home">Home</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#portfolio">
+										<span class="icon solid fa-star">Featured Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../projects.html" class="active">
+										<span class="icon solid fa-th">All Projects</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#about">
+										<span class="icon solid fa-user">About Me</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="../index.html#contact">
+										<span class="icon solid fa-envelope">Contact</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/cristina-mcm" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="mailto:cristinamcmillin.cm@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+			    <section class="two">
+					<div class="container project-detail">
+
+						<header>
+							<h2>Steam Games Data and Market Analysis</h2>
+
+							<p class="project-subtitle">
+								Python &bull; API Integration &bull; Power BI
+							</p>
+							
+							<p>
+								An end-to-end data analysis project combining Python data
+								preparation and exploratory analysis with an interactive
+								Power BI dashboard examining the Steam games market.
+							</p>
+						</header>
+
+						<a class="image featured">
+							<img
+								src="../images/steam-games-banner.jpg"
+								alt="Steam Games Data and Market Analysis project"
+							/>
+						</a>
+
+						<div class="project-content">
+							<h3>Project Overview</h3>
+
+							<p>
+								This project examines the Steam games market to identify patterns in game
+								pricing, popularity, player engagement, and estimated copies sold. It also
+								explores how market performance differs among indie, AA, and AAA publishers.
+								The project combines Python-based data collection and preparation with an
+								interactive Power BI dashboard.
+							</p>
+
+							<h3>Data Sources</h3>
+
+							<p>
+								The primary dataset was obtained from Kaggle and contained
+								information about more than 140,000 Steam games. Additional
+								market data, including estimated copies sold and publisher
+								classifications, were retrieved from the Gamalytic API.
+							</p>
+
+							<h3>Python Data Preparation and Workflow</h3>
+
+							<p>
+								Python and Pandas were used to inspect, clean, and transform the
+								original dataset. Columns containing genres, categories, and
+								tags were converted from text representations into usable
+								lists. API data were retrieved across multiple pages and merged
+								with the original dataset using the Steam application ID.
+							</p>
+
+							<p>
+								The completed merged dataset contained 128,594 matched games.
+								Exploratory analysis examined numerical correlations, pricing
+								groups, publisher classes, genres, player modes, review scores,
+								recommendations, copies sold, and estimated revenue.
+							</p>
+
+							<h3>Power BI Dashboard</h3>
+
+							<p>
+								The prepared dataset was used to build an interactive Power BI
+								dashboard. The interactive dashboard allows users to compare
+								market performance by publisher category, pricing model, genre,
+								and individual game.
+							</p>
+
+							<div class="dashboard-card">
+								<img
+									src="../images/steam-games-dashboard.png"
+									alt="Steam Games Market Analysis Power BI dashboard"
+									class="dashboard-preview"
+									onclick="openLightbox(this.src, this.alt)"
+								/>
+							</div>
+
+							<h3>Results and Key Findings</h3>
+
+							<p>
+								The analysis showed that market performance varies considerably across
+								publisher categories, pricing models, genres, and individual titles. AAA
+								publishers accounted for many of the games with the highest estimated copies
+								sold, while AA publishers formed the next strongest group. Indie games were
+								far more numerous, but only a comparatively small number reached the sales
+								levels of the strongest AA and AAA releases.
+							</p>
+
+							<ul>
+								<li>
+									Free-to-play games often supported large player communities, but price
+									alone did not determine popularity or commercial success.
+								</li>
+
+								<li>
+									Player engagement and estimated copies sold were concentrated among a
+									relatively small number of highly successful titles.
+								</li>
+
+								<li>
+									Genres, multiplayer features, publisher resources, and established
+									franchises appeared to influence market performance alongside price.
+								</li>
+
+								<li>
+									Publisher classification provided useful market context, but substantial
+									performance differences remained within each publisher group.
+								</li>
+							</ul>
+
+							<h3>Skills Demonstrated</h3>
+
+							<ul>
+								<li>Python API extraction</li>
+								<li>Data cleaning and validation with pandas</li>
+								<li>Exploratory data analysis</li>
+								<li>Power BI data modeling and dashboard development</li>
+							</ul>
+						</div>
+
+						<footer class="project-buttons">
+
+							<a
+								href="https://github.com/cristina-mcm/Steam-Games-Data-Analysis-Python"
+								class="button"
+							>
+								View Python Analysis
+							</a>
+
+							<a
+								href="https://github.com/cristina-mcm/Steam-Games-Analysis-Power-BI"
+								class="button"
+							>
+								View Power BI Analysis
+							</a>
+
+						</footer>
+
+					</div>
+				</section>	
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; 2026 Cristina McMillin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+
+			<div
+				id="dashboard-lightbox"
+				class="dashboard-lightbox"
+				onclick="closeLightbox()"
+			>
+				<span class="lightbox-close">&times;</span>
+
+				<img
+					id="lightbox-image"
+					src=""
+					alt=""
+					onclick="event.stopPropagation()"
+				/>
+			</div>
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script>
+				function openLightbox(imageSource, imageDescription) {
+					const lightbox = document.getElementById('dashboard-lightbox');
+					const image = document.getElementById('lightbox-image');
+
+					image.src = imageSource;
+					image.alt = imageDescription;
+					lightbox.classList.add('open');
+				}
+
+				function closeLightbox() {
+					document
+						.getElementById('dashboard-lightbox')
+						.classList.remove('open');
+				}
+
+				document.addEventListener('keydown', function(event) {
+					if (event.key === 'Escape') {
+						closeLightbox();
+					}
+				});
+			</script>
+	</body>
+</html>
